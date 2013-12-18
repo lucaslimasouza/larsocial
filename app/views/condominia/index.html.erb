@@ -1,0 +1,35 @@
+<h1>Listing condominia</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Address</th>
+      <th>Number</th>
+      <th>Zip code</th>
+      <th>Building</th>
+      <th>Designation building</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @condominia.each do |condominium| %>
+      <tr>
+        <td><%= condominium.address %></td>
+        <td><%= condominium.number %></td>
+        <td><%= condominium.zip_code %></td>
+        <td><%= condominium.building %></td>
+        <td><%= condominium.designation_building %></td>
+        <td><%= link_to 'Show', condominium %></td>
+        <td><%= link_to 'Edit', edit_condominium_path(condominium) %></td>
+        <td><%= link_to 'Destroy', condominium, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Condominium', new_condominium_path %>
