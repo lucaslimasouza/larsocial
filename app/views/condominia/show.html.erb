@@ -1,29 +1,29 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = Condominium -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
 
-<p>
-  <strong>Address:</strong>
-  <%= @condominium.address %>
-</p>
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:address) %>:</strong></dt>
+  <dd><%= @condominium.address %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:number) %>:</strong></dt>
+  <dd><%= @condominium.number %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:zip_code) %>:</strong></dt>
+  <dd><%= @condominium.zip_code %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:building) %>:</strong></dt>
+  <dd><%= @condominium.building %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:designation_building) %>:</strong></dt>
+  <dd><%= @condominium.designation_building %></dd>
+</dl>
 
-<p>
-  <strong>Number:</strong>
-  <%= @condominium.number %>
-</p>
-
-<p>
-  <strong>Zip code:</strong>
-  <%= @condominium.zip_code %>
-</p>
-
-<p>
-  <strong>Building:</strong>
-  <%= @condominium.building %>
-</p>
-
-<p>
-  <strong>Designation building:</strong>
-  <%= @condominium.designation_building %>
-</p>
-
-<%= link_to 'Edit', edit_condominium_path(@condominium) %> |
-<%= link_to 'Back', condominia_path %>
+<div class="form-actions">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              condominia_path, :class => 'btn'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_condominium_path(@condominium), :class => 'btn' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              condominium_path(@condominium),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>

@@ -1,5 +1,8 @@
 Larsocial::Application.routes.draw do
+  devise_for :syndics
   resources :condominia
+
+  root 'condominia#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
