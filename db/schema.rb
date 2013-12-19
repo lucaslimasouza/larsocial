@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131218140336) do
+ActiveRecord::Schema.define(version: 20131219021708) do
 
   create_table "condominia", force: true do |t|
     t.string   "address"
@@ -21,7 +21,10 @@ ActiveRecord::Schema.define(version: 20131218140336) do
     t.string   "designation_building"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "syndic_id"
   end
+
+  add_index "condominia", ["syndic_id"], name: "index_condominia_on_syndic_id"
 
   create_table "syndics", force: true do |t|
     t.string   "email",                  default: "", null: false

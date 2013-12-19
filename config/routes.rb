@@ -1,5 +1,5 @@
 Larsocial::Application.routes.draw do
-  devise_for :syndics
+  devise_for :syndics, :controllers => { :registrations => "syndics_registrations"}
   resources :condominia
 
   root 'condominia#index'
