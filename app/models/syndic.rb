@@ -7,4 +7,6 @@ class Syndic < ActiveRecord::Base
   validates_presence_of :name, :phone, :cpf
 
   has_one :condominium
+
+  accepts_nested_attributes_for :condominium, allow_destroy: true
 end

@@ -17,4 +17,20 @@ describe Condominium do
 		it { should validate_presence_of(:building) }
 		it { should validate_presence_of(:designation_building) }
 	end
+
+	context "association" do
+		it { should belong_to(:syndic) }
+	end
+
+	context "generate key" do
+		it "should generate a key it size 4" do
+			condominium = Condominium.new
+			condominium.build_key.size.should == 4 
+		end
+	end
+
+	context "create" do
+		it { should callback(:build_key).before(:save) }
+	end
+
 end

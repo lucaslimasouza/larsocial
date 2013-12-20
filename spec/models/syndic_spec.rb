@@ -15,6 +15,10 @@ describe Syndic do
   end
 
   context "associations" do
-    it { should have_one(:condominium)}
+    it { should have_one(:condominium) }
   end
+
+  context "nested attributes" do
+    it { should accept_nested_attributes_for(:condominium).allow_destroy(true) }
+  end 
 end
