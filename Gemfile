@@ -32,17 +32,18 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-group :development, :test do
-  gem 'rspec-rails', '~> 3.0.0.beta'
-  gem 'shoulda-matchers'
-  gem "shoulda-callback-matchers", ">=0.3.0"
-end
-
 gem 'less-rails'
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 
 gem 'responders'
 gem 'devise'
+
+
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0.0.beta'
+  gem 'shoulda-matchers'
+  gem "shoulda-callback-matchers", ">=0.3.0"
+end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
