@@ -1,30 +1,39 @@
-<div class="control-group">
-    <%= f.label :address, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :address, :autofocus => true, :class => 'text_field' %>
-    </div>
+<p>
+  <%= f.label :address %>
+  <%= f.text_field :address, :autofocus => true %>
+  <%= error_tag resource.condominium, :address %>
+</p>
+
+<p>
+  <%= f.label :number %>
+  <%= f.text_field :number %>
+  <%= error_tag resource.condominium, :number %>
+</p>
+
+<p>
+  <%= f.label :zip_code %>
+  <%= f.text_field :zip_code%>
+  <%= error_tag resource.condominium, :zip_code %>
+</p>
+
+<p>
+  <%= f.label :building%>
+  <%= f.text_field :building%>
+  <%= error_tag resource.condominium, :building %>
+</p>
+
+<p>
+  <%= f.label :designation_building%>
+
+  <div class="span1">
+    <%= f.radio_button :designation_building, "A..Z" %>
+    <%= f.label :designation_building, "A..Z" %> 
   </div>
-  <div class="control-group">
-    <%= f.label :number, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :number, :class => 'text_field' %>
-    </div>
+
+  <div class="span1">
+    <%= f.radio_button :designation_building, "1..100" %>
+    <%= f.label :designation_building, "1..100" %>
   </div>
-  <div class="control-group">
-    <%= f.label :zip_code, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :zip_code, :class => 'text_field' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :building, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :building, :class => 'text_field' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :designation_building, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :designation_building, :class => 'text_field' %>
-    </div>
-  </div>
+
+  <%= error_tag resource.condominium, :designation_building %>
+</p>

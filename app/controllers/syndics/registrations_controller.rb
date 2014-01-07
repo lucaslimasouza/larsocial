@@ -24,9 +24,13 @@ class Syndics::RegistrationsController < Devise::RegistrationsController
       end
     else
       clean_up_passwords resource
-      resource.build_condominium
+      resource.condominium
       respond_with resource
     end
+  end
+
+  def after_sign_up_path_for(resource)
+    "/condominia/#{resource.condominium.id}"
   end
 
 

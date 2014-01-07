@@ -1,0 +1,56 @@
+pt-BR:
+  condominium:
+    new:
+      title: Informações sobre Condominio
+  syndic:
+    new:
+      title: Informações sobre Síndico
+
+  button:
+    save: Salvar
+  links:
+    back: Voltar
+    home: Página Inicial
+    show: Mostrar
+    edit: Editar
+    delete: Apagar
+    report: Relatório
+    records: Cadastros
+    new_empresa: Nova Empresa
+    list_empresas: Todas Empresas
+    new_equipe: Nova Equipe
+    list_equipes: Todas Equipes
+    new_funcionario: Novo Funcionario
+    list_funcionarios: Todos Funcionarios
+    new_localizacao: Nova Localização
+    list_localizacaos: Todas Localizações
+
+  message:
+    are_you_sure: Você tem certeza?
+    form_error: 'Infelizmente não foi possível completar a ação, pois o formulário possui os seguintes erros:'
+
+  table:
+    edit: Editar
+    show: Visualizar
+    delete: Apagar
+
+  activerecord:
+    models:
+      syndic: Síndico
+      condominium: Condominio
+    attributes:
+      syndic:
+        name: Nome
+        phone: Telefone
+        email: E-mail
+        cpf: CPF 
+        password: Senha
+        password_confirmation: Confirme a senha
+
+      condominium:
+        address: Nome da Rua/Av
+        number: Número
+        zip_code: CEP
+        building: Qual a quantidade de Blocos/Prédios?
+        designation_building: Como os Blocos/Prédios são nomeados?
+
