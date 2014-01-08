@@ -48,6 +48,7 @@ pt-BR:
         password_confirmation: "Confirme a senha:"
 
       condominium:
+        name: "Nome:"
         address: "Nome da Rua/Av:"
         number: "Número:"
         zip_code: "CEP:"

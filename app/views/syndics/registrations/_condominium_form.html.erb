@@ -1,6 +1,11 @@
 <p>
+  <%= f.label :name %>
+  <%= f.text_field :name, :autofocus => true %>
+  <%= error_tag resource.condominium, :name %>
+</p>
+<p>
   <%= f.label :address %>
-  <%= f.text_field :address, :autofocus => true %>
+  <%= f.text_field :address %>
   <%= error_tag resource.condominium, :address %>
 </p>
 
