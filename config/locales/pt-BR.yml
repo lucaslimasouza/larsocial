@@ -40,17 +40,17 @@ pt-BR:
       condominium: Condominio
     attributes:
       syndic:
-        name: Nome
-        phone: Telefone
-        email: E-mail
-        cpf: CPF 
-        password: Senha
-        password_confirmation: Confirme a senha
+        name: "Nome:"
+        phone: "Telefone:"
+        email: "E-mail:"
+        cpf: "CPF:"
+        password: "Senha:"
+        password_confirmation: "Confirme a senha:"
 
       condominium:
-        address: Nome da Rua/Av
-        number: Número
-        zip_code: CEP
+        address: "Nome da Rua/Av:"
+        number: "Número:"
+        zip_code: "CEP:"
         building: Qual a quantidade de Blocos/Prédios?
         designation_building: Como os Blocos/Prédios são nomeados?
 

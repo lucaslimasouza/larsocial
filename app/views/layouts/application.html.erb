@@ -8,21 +8,7 @@
 </head>
 <body>
 
-	    <!-- Fixed navbar -->
-<div class="navbar">
-  <div class="navbar-inner">
-    <div class="container">
-      <div class="row-fluid">
-        <div class="span12">
-          <%= link_to image_tag("/imgs/brand-complete.png"), root_path, :class =>"brand" %>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-<%= link_to('Logout', destroy_syndic_session_path, :method => :delete) %>
+<%= render :partial => 'layouts/head' %>
 
 <div class="container-fluid back-color-panel">
   <!-- ROW -->

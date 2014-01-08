@@ -21,7 +21,7 @@ describe Condominium do
 	context 'validations numericality ' do
 		it { should validate_numericality_of(:zip_code) }
 		it { should validate_numericality_of(:number) }
-		it { should validate_numericality_of(:building) }
+		it { should validate_numericality_of(:building).is_less_than(400) }
 	end
 
 	context "association" do

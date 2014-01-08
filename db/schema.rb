@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131220002027) do
+ActiveRecord::Schema.define(version: 20140108003957) do
 
   create_table "condominia", force: true do |t|
     t.string   "address"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20131220002027) do
     t.datetime "updated_at"
     t.integer  "syndic_id"
     t.string   "key"
+    t.string   "name"
   end
 
   add_index "condominia", ["syndic_id"], name: "index_condominia_on_syndic_id"
