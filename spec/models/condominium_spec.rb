@@ -8,6 +8,7 @@ describe Condominium do
 		it { should respond_to(:zip_code) }
 		it { should respond_to(:building) }
 		it { should respond_to(:designation_building) }
+		it { should respond_to(:name) }
 	end
 
 	context "validations presence " do
@@ -16,6 +17,7 @@ describe Condominium do
 		it { should validate_presence_of(:zip_code) }
 		it { should validate_presence_of(:building) }
 		it { should validate_presence_of(:designation_building) }
+		it { should validate_presence_of(:name) }
 	end
 
 	context 'validations numericality ' do
