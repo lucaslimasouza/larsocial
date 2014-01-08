@@ -10,12 +10,18 @@ describe Condominium do
 		it { should respond_to(:designation_building) }
 	end
 
-	context "validations" do
+	context "validations presence " do
 		it { should validate_presence_of(:address) }
 		it { should validate_presence_of(:number) }
 		it { should validate_presence_of(:zip_code) }
 		it { should validate_presence_of(:building) }
 		it { should validate_presence_of(:designation_building) }
+	end
+
+	context 'validations numericality ' do
+		it { should validate_numericality_of(:zip_code) }
+		it { should validate_numericality_of(:number) }
+		it { should validate_numericality_of(:building) }
 	end
 
 	context "association" do
