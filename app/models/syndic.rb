@@ -5,7 +5,8 @@ class Syndic < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   validates_presence_of :name, :phone, :cpf
-  validates_numericality_of :phone, :cpf
+  validates_numericality_of :phone
+  validates_numericality_of :cpf, equal_to: 11 
 
   has_one :condominium
 

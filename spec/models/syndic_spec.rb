@@ -8,14 +8,16 @@ describe Syndic do
   	it { should respond_to(:cpf) }
   end
 
-  context "validations" do
+  context "validations presence" do
   	it { should validate_presence_of(:name) }
   	it { should validate_presence_of(:phone) }
   	it { should validate_presence_of(:cpf) }
-    
-    it { should validate_numericality_of(:phone) }
-    it { should validate_numericality_of(:cpf) }
   end 
+
+  context "validations numericality " do
+    it { should validate_numericality_of(:phone) }
+    it { should validate_numericality_of(:cpf).is_equal_to(11) }
+  end
 
   context "associations" do
     it { should have_one(:condominium) }
