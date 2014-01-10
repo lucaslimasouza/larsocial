@@ -7,6 +7,7 @@ class Condominium < ActiveRecord::Base
 	validates_numericality_of :building, less_than: 400
 
 		belongs_to :syndic
+		has_many :apartment
 
 		before_save :build_key
 

@@ -28,6 +28,7 @@ describe Condominium do
 
 	context "association" do
 		it { should belong_to(:syndic) }
+		it { should have_many(:apartment) }
 	end
 
 	context "generate key" do
