@@ -1,44 +1,54 @@
 <%- model_class = Condominium -%>
-<div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
-</div>
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:address) %></th>
-      <th><%= model_class.human_attribute_name(:number) %></th>
-      <th><%= model_class.human_attribute_name(:zip_code) %></th>
-      <th><%= model_class.human_attribute_name(:building) %></th>
-      <th><%= model_class.human_attribute_name(:designation_building) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
-      <th><%=t '.actions', :default => t("helpers.actions") %></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @condominia.each do |condominium| %>
-      <tr>
-        <td><%= link_to condominium.id, condominium_path(condominium) %></td>
-        <td><%= condominium.address %></td>
-        <td><%= condominium.number %></td>
-        <td><%= condominium.zip_code %></td>
-        <td><%= condominium.building %></td>
-        <td><%= condominium.designation_building %></td>
-        <td><%=l condominium.created_at %></td>
-        <td>
-          <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                      edit_condominium_path(condominium), :class => 'btn btn-mini' %>
-          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-                      condominium_path(condominium),
-                      :method => :delete,
-                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-                      :class => 'btn btn-mini btn-danger' %>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
-<%= link_to t('.new', :default => t("helpers.links.new")),
-            new_condominium_path,
-            :class => 'btn btn-primary' %>
+<div class="span12 white padding">
+
+  <fieldset>
+
+    <legend><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></legend>
+
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th><%= model_class.human_attribute_name(:name) %></th>
+          <th><%= model_class.human_attribute_name(:address) %></th>
+          <th><%= model_class.human_attribute_name(:number) %></th>
+          <th><%= model_class.human_attribute_name(:zip_code) %></th>
+          <th><%= model_class.human_attribute_name(:building) %></th>
+          <th><%= model_class.human_attribute_name(:designation_building) %></th>
+          <th><%= model_class.human_attribute_name(:created_at) %></th>
+          <th><%=t 'table.edit' %></th>
+          <th><%=t 'table.show' %></th>
+          <th><%=t 'table.delete' %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @condominia.each do |condominium| %>
+          <tr>
+            <td><%= condominium.name %></td>
+            <td><%= condominium.address %></td>
+            <td><%= condominium.number %></td>
+            <td><%= condominium.zip_code %></td>
+            <td><%= condominium.building %></td>
+            <td><%= condominium.designation_building %></td>
+            <td><%=l condominium.created_at %></td>
+            <td>
+              <%= link_to image_tag("/imgs/icons/edit_icon.png"), edit_condominium_path(condominium) %>
+            </td>
+            <td>
+              <%= link_to image_tag('/imgs/icons/show_icon.png'), condominium_path(condominium) %>
+            </td>
+            <td>
+              <%= link_to image_tag('/imgs/icons/delete_icon.png'),
+                          condominium_path(condominium),
+                          :method => :delete,
+                          :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) } %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+      
+    </table>
+
+  </fieldset>
+
+</div>

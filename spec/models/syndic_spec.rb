@@ -16,7 +16,6 @@ describe Syndic do
 
   context "validations numericality " do
     it { should validate_numericality_of(:phone) }
-    it { should validate_numericality_of(:cpf).is_equal_to(11) }
   end
 
   context "associations" do

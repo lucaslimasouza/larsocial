@@ -38,6 +38,6 @@ class Syndics::RegistrationsController < Devise::RegistrationsController
     params.
       require(:syndic).
       permit(:name, :phone, :cpf,  :email, :password, :password_confirmation,
-        condominium_attributes: [:address, :number, :zip_code, :building, :designation_building ])
+        condominium_attributes: [:address, :number, :zip_code, :building, :designation_building, :name])
   end
 end

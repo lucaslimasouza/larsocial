@@ -40,6 +40,6 @@ class CondominiaController < ApplicationController
     end
 
     def condominium_params
-      params.require(:condominium).permit(:address, :number, :zip_code, :building, :designation_building)
+      params.require(:condominium).permit(:address, :number, :zip_code, :building, :designation_building, :name)
     end
 end

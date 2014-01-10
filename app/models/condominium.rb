@@ -11,6 +11,6 @@ class Condominium < ActiveRecord::Base
 		before_save :build_key
 
 		def build_key
-			self.key = SecureRandom.hex(2)
+			self.key ||= SecureRandom.hex(2)
 		end
 end

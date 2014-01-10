@@ -1,4 +1,5 @@
 Larsocial::Application.routes.draw do
+  devise_for :dwellers
   devise_for :syndics, :controllers => { :registrations => "syndics/registrations"}
   resources :condominia
 

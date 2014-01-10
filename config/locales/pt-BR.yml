@@ -34,6 +34,9 @@ pt-BR:
     show: Visualizar
     delete: Apagar
 
+  title:
+    edit: "Editar - %{model}"
+
   activerecord:
     models:
       syndic: Síndico
@@ -54,4 +57,5 @@ pt-BR:
         zip_code: "CEP:"
         building: Qual a quantidade de Blocos/Prédios?
         designation_building: Como os Blocos/Prédios são nomeados?
+        key: "Chave:"
 
