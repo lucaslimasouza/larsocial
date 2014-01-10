@@ -11,14 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140110004146) do
+ActiveRecord::Schema.define(version: 20140110005920) do
 
   create_table "apartments", force: true do |t|
     t.string   "designation_building"
     t.string   "number"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "dweller_id"
   end
+
+  add_index "apartments", ["dweller_id"], name: "index_apartments_on_dweller_id"
 
   create_table "condominia", force: true do |t|
     t.string   "address"

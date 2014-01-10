@@ -5,4 +5,6 @@ class Dweller < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   validates_presence_of :name, :phone
+
+  has_one :apartment
 end

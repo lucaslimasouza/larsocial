@@ -12,6 +12,9 @@ describe Dweller do
   	it { should validate_presence_of(:phone) }
   end
 
-
+  context 'association' do
+  	it { should have_one(:apartment) }
+  	
+  end
 
 end
