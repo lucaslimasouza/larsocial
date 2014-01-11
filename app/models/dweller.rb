@@ -7,4 +7,5 @@ class Dweller < ActiveRecord::Base
   validates_presence_of :name, :phone
 
   has_one :apartment
+  accepts_nested_attributes_for :apartment, allow_destroy: true
 end
