@@ -33,13 +33,22 @@ describe Condominium do
 
 	context "generate key" do
 		it "should generate a key it size 4" do
-			condominium = Condominium.new
+			condominium = build(:condominium)
 			condominium.build_key.size.should == 4 
 		end
 	end
 
 	context "create" do
 		it { should callback(:build_key).before(:save) }
+	end
+
+	context 'search' do
+		it "get some key and return a Condominium" do
+			condominium = create(:condominium)
+			key = condominium.key
+
+			Condominium.search(key).first.key.should == key
+		end
 	end
 
 end
