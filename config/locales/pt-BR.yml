@@ -1,10 +1,16 @@
 pt-BR:
   condominium:
     new:
-      title: Informações sobre Condominio
+      title: Informações sobre o Condominio
   syndic:
     new:
-      title: Informações sobre Síndico
+      title: Informações sobre o Síndico
+  apartment:
+    new:
+      title: Informações sobre o Apartamento
+  dweller:
+    new:
+      title: Informações sobre o Morador
 
   button:
     save: Salvar
@@ -41,6 +47,9 @@ pt-BR:
     models:
       syndic: Síndico
       condominium: Condominio
+      apartment: Apartamento
+      dweller: Morador
+
     attributes:
       syndic:
         name: "Nome:"
@@ -58,4 +67,16 @@ pt-BR:
         building: Qual a quantidade de Blocos/Prédios?
         designation_building: Como os Blocos/Prédios são nomeados?
         key: "Chave:"
+
+      apartment:
+        number: Número
+        designation_building: Qual o número/letra do prédio?
+
+      dweller:
+        name: "Nome:"
+        phone: "Telefone:"
+        email: "E-mail:"
+        cpf: "CPF:"
+        password: "Senha:"
+        password_confirmation: "Confirme a senha:"
 

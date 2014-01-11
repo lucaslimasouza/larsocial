@@ -1,0 +1,60 @@
+<div class="padding white">
+  
+  <!-- BEGIN block form APARTMENT -->
+  <div class="box-create-apartment">
+
+    <fieldset>
+      <legend><%= t 'apartment.new.title' %></legend>
+				
+				<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+				<%= f.fields_for :apartment do |apartment_form| %>
+					<%= render 'apartment_form', f: apartment_form %>
+				<% end %>
+
+    </fieldset>
+
+  </div>
+  <!-- END block form APARTMENT -->
+
+  <div class="box-create-dweller">
+
+  <fieldset>
+    <legend><%= t 'dweller.new.title' %></legend>
+
+	  	<p>
+	  		<%= f.label :name %>
+		  	<%= f.email_field :name %>
+		  </p>	  	
+
+		  <p>
+	  		<%= f.label :phone %>
+		  	<%= f.email_field :phone %>
+		  </p>
+
+	  	<p>
+	  		<%= f.label :email %>
+		  	<%= f.email_field :email %>
+		  </p>
+
+		  <p>
+		  	<%= f.label :password %>
+		  	<%= f.password_field :password %>
+		  </p>
+
+		  <p>
+		  	<%= f.label :password_confirmation %>
+		  	<%= f.password_field :password_confirmation %>
+		  </p>
+
+      <div class="form-actions">
+        <%= f.submit t('button.save'), class: "btn btn-info" %>
+      </div>
+
+		<% end %>
+
+		 </fieldset>
+  </div>
+
+	<%= render "dwellers/shared/links" %>
+
+</div>
