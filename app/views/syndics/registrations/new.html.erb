@@ -4,7 +4,7 @@
   <div class="box-create">
 
     <fieldset>
-      <legend><%= t 'condominium.new.title' %></legend>
+      <legend class="span12 alert alert-success"><%= t 'condominium.new.title' %></legend>
 
     <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
 
@@ -20,7 +20,7 @@
   <div class="box-create-syndic">
 
     <fieldset>
-      <legend><%= t 'syndic.new.title' %></legend>
+      <legend  class="span12 alert alert-info"><%= t 'syndic.new.title' %></legend>
 
       <p>
         <%= f.label :name %>

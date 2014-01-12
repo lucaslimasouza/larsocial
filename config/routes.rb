@@ -5,7 +5,9 @@ Larsocial::Application.routes.draw do
   devise_for :syndics, :controllers => { :registrations => "syndics/registrations" }
   resources :condominia
 
-  root 'condominia#index'
+  resource :home, only: [:index]
+
+  root 'home#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
