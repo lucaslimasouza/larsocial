@@ -1,10 +1,27 @@
 <div class="padding white">
-  
-  <!-- BEGIN block form APARTMENT -->
+
+  <div class="row-fluid">
+		<div class="box-title-add">
+			<h2 class="center"> <%= t 'title.add_apartment' %> </h2>
+		</div>
+	</div>
+
+ <% unless @condominium.present? %>
+
+ 	<%= render 'search_condominium_form' %>
+
+  <!-- BEGIN BLOCK SHOW CONDOMINIUM -->
+ <% else %>
+
+ 	<%= render 'show_condominium' %>
+
+ <!-- BEGIN block form APARTMENT -->
+
+ <div class="row-fluid">
   <div class="box-create-apartment">
 
     <fieldset>
-      <legend><%= t 'apartment.new.title' %></legend>
+      <legend class="span12 alert alert-success"><%= t 'apartment.new.title' %></legend>
 				
 				<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
 				<%= f.fields_for :apartment do |apartment_form| %>
@@ -14,36 +31,44 @@
     </fieldset>
 
   </div>
+ </div>
   <!-- END block form APARTMENT -->
 
+  <!-- BEGIN block form DWELLER -->
+ <div class="row-fluid">
   <div class="box-create-dweller">
 
   <fieldset>
-    <legend><%= t 'dweller.new.title' %></legend>
+    <legend class="span12 alert alert-info"><%= t 'dweller.new.title' %></legend>
 
 	  	<p>
 	  		<%= f.label :name %>
-		  	<%= f.email_field :name %>
+		  	<%= f.text_field :name %>
+        <%= error_tag resource, :name %>
 		  </p>	  	
 
 		  <p>
 	  		<%= f.label :phone %>
-		  	<%= f.email_field :phone %>
+		  	<%= f.text_field :phone %>
+		  	<%= error_tag resource, :phone %>
 		  </p>
 
 	  	<p>
 	  		<%= f.label :email %>
 		  	<%= f.email_field :email %>
+		  	<%= error_tag resource, :email %>
 		  </p>
 
 		  <p>
 		  	<%= f.label :password %>
 		  	<%= f.password_field :password %>
+		  	<%= error_tag resource, :password %>
 		  </p>
 
 		  <p>
 		  	<%= f.label :password_confirmation %>
 		  	<%= f.password_field :password_confirmation %>
+		  	<%= error_tag resource, :password_confirmation %>
 		  </p>
 
       <div class="form-actions">
@@ -53,8 +78,11 @@
 		<% end %>
 
 		 </fieldset>
+  	</div>
   </div>
+  <!-- END block form DWELLER -->
 
 	<%= render "dwellers/shared/links" %>
 
+	<% end %>
 </div>

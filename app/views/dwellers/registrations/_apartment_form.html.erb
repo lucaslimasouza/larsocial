@@ -1,10 +1,12 @@
 <p>
   <%= f.label :designation_building %>
   <%= f.text_field :designation_building, :autofocus => true %>
+  <%= error_tag resource.apartment, :designation_building %>
 </p>
 
 <p>
   <%= f.label :number %>
   <%= f.text_field :number %>
+  <%= error_tag resource.apartment, :number %>
 </p>
 

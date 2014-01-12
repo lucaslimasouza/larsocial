@@ -1,0 +1,30 @@
+<div class="row-fluid ">
+  <div class="page-header alert alert-block">
+    <h3><%= t 'condominium.show.title', name: @condominium.name %></h3>
+
+    <dl class="dl-horizontal">
+      <dt><strong><%= t 'activerecord.attributes.condominium.address' %></strong></dt>
+      <dd><%= @condominium.address %></dd>
+      <dt><strong><%= t 'activerecord.attributes.condominium.number' %></strong></dt>
+      <dd><%= @condominium.number %></dd>
+      <dt><strong><%= t 'activerecord.attributes.condominium.zip_code' %></strong></dt>
+      <dd><%= @condominium.zip_code %></dd>
+    </dl>
+    
+  </div>
+
+</div>
+
+  <div class="row-fluid">
+
+      <div class="span4"></div>
+
+      <div class="span4 alert alert-block center">
+        <h5><%= t 'activerecord.attributes.condominium.key' %></h5>
+        <h3><%= @condominium.key %></h3>
+      </div>
+
+      <div class="span4"></div>
+
+  </div>
+<!-- END BLOCK SHOW CONDOMINIUM -->
