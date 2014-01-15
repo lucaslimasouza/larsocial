@@ -2,16 +2,45 @@
 <html>
 <head>
   <title>Larsocial</title>
+   <link href='http://fonts.googleapis.com/css?family=Emblema+One' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body class="home-background">
 
-  <%= render :partial => 'layouts/head' %>
+      <div class="container-fluid">
 
-   <%= yield %>
+      <div class="masthead">
+        <ul class="nav nav-pills pull-right">
+          <li class="active"><a href="#">Início</a></li>
+          <li><a href="#">Sobre</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+        <h3 class="muted"><%= link_to image_tag("/imgs/brand-complete.png"), root_path, :class =>"brand" %></h3>
+      </div>
 
+      <hr>
+
+      <div class="jumbotron center">
+        <h1 class="home-page-title">Organizando as Atividades do seu Condomínio!</h1>
+        <p class="lead">O Lar Social é um produto Web, com objetivo de melhorar e organizar a convivência entre os moradores do seu condomínio.</p>
+        <a class="btn btn-large btn-success" href="#">Cadastre já</a>
+      </div>
+
+      <hr>
+ 
+
+ 			  <%= yield %>
+
+
+      <hr>
+
+       <div class="footer">
+        <p>&copy; Company 2013</p>
+      </div>
+
+    </div> <!-- /container -->
 
 </body>
 </html>

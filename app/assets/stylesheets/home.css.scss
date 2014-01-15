@@ -2,16 +2,29 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
 .box-home-page-title{
 	color: #dff0d8;
 	margin-top: 5%;
 	margin-bottom: 5%;
 }
 
-.home-page-title{
-	color: #dff0d8;
+
+
+.home-page-subtitle{
+	color: #333;
+	font-family: 'Verdana';
 }
 
 .home-background{
-	background-color: #444;
+	background-color: #fff;
+}
+
+.preenche{
+	height: 400px;
+}
+
+.box-mk-text{
+	margin-top: 4%;
+	margin-bottom:4%;
 }
