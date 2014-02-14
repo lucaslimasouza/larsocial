@@ -1,7 +1,7 @@
 
 class Syndics::RegistrationsController < Devise::RegistrationsController
 
-	def new
+  def new
     build_resource({})
     self.resource.build_condominium
     respond_with self.resource

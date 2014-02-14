@@ -8,12 +8,12 @@ describe Apartment do
   end
 
   context 'validate presence' do
-  	it { should validate_presence_of(:designation_building) }
-  	it { should validate_presence_of(:number) }
+    it { should validate_presence_of(:designation_building) }
+    it { should validate_presence_of(:number) }
   end
 
   context 'association' do
-  	it { should belong_to(:dweller) }
-  	it { should belong_to(:condominium) }
+    it { should belong_to(:dweller) }
+    it { should belong_to(:condominium) }
   end
 end
