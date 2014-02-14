@@ -1,11 +1,11 @@
 
 class Dwellers::RegistrationsController < Devise::RegistrationsController
 
-	def new
-		@search_key = params[:q]
-		if @search_key.present?
-			search_condominium
-		end
+  def new
+    @search_key = params[:q]
+    if @search_key.present?
+      search_condominium
+    end
   end
 
   # POST /resource
@@ -40,21 +40,21 @@ class Dwellers::RegistrationsController < Devise::RegistrationsController
   private
 
   def search_condominium
-		@condominium = Condominium.search(@search_key).first
-		if @condominium.present?
-			build_nested_resource_objects
-		else
-			flash[:notice] = "Favor inserir uma CHAVE válida"
-		end
+  	@condominium = Condominium.search(@search_key).first
+  	if @condominium.present?
+  		build_nested_resource_objects
+  	else
+  		flash[:notice] = "Favor inserir uma CHAVE válida"
+  	end
   end
 
   def build_nested_resource_objects
-		flash[:notice] = nil
-		build_resource({})
-	
-		self.resource.build_apartment
-		self.resource.apartment.condominium = @condominium
+  	flash[:notice] = nil
+  	build_resource({})
 
-		respond_with self.resource
+  	self.resource.build_apartment
+  	self.resource.apartment.condominium = @condominium
+
+  	respond_with self.resource
   end
 end
